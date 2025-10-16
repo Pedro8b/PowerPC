@@ -1,4 +1,9 @@
-/* ===== БАЗОВЫЕ СТИЛИ И СБРОС ===== */
+/* ===== POWER PC - ОСНОВНЫЕ СТИЛИ ===== */
+/* Все базовые стили, компоненты, шапка и футер в одном файле */
+
+/* ========================================
+   1. СБРОС И БАЗОВЫЕ СТИЛИ
+======================================== */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +18,9 @@ body {
     min-height: 100vh;
 }
 
-/* ===== БАЗОВЫЕ ЦВЕТА ===== */
+/* ========================================
+   2. CSS ПЕРЕМЕННЫЕ (ЦВЕТА И РАЗМЕРЫ)
+======================================== */
 :root {
     --primary-color: #8a2be2;
     --primary-hover: #7a1bd2;
@@ -27,7 +34,9 @@ body {
     --warning-color: #ffc107;
 }
 
-/* ===== ОБЩИЕ СТИЛИ ДЛЯ ТЕКСТА ===== */
+/* ========================================
+   3. ТИПОГРАФИКА
+======================================== */
 h1,
 h2,
 h3,
@@ -57,7 +66,9 @@ img {
     height: auto;
 }
 
-/* ===== БАЗОВЫЕ КНОПКИ ===== */
+/* ========================================
+   4. КНОПКИ
+======================================== */
 .btn {
     display: inline-block;
     padding: 1rem 2.5rem;
@@ -80,6 +91,11 @@ img {
     padding: 1.3rem 3.5rem;
     font-size: 1.3rem;
     font-weight: 600;
+}
+
+.btn-small {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
 }
 
 .btn-full {
@@ -107,7 +123,9 @@ img {
     background: rgba(138, 43, 226, 0.1);
 }
 
-/* ===== БАЗОВЫЕ ФОРМЫ ===== */
+/* ========================================
+   5. ФОРМЫ
+======================================== */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -163,7 +181,9 @@ img {
     display: block;
 }
 
-/* ===== БАЗОВЫЕ КАРТОЧКИ ===== */
+/* ========================================
+   6. КАРТОЧКИ
+======================================== */
 .card {
     background: var(--secondary-bg);
     border-radius: 15px;
@@ -177,7 +197,18 @@ img {
     transform: translateY(-5px);
 }
 
-/* ===== БАЗОВЫЕ БЕЙДЖИ ===== */
+.card-highlight {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+}
+
+.card-dark {
+    background: rgba(20, 20, 20, 0.9);
+}
+
+/* ========================================
+   7. БЕЙДЖИ
+======================================== */
 .badge {
     display: inline-block;
     padding: 0.3rem 1rem;
@@ -196,7 +227,27 @@ img {
     color: white;
 }
 
-/* ===== СООБЩЕНИЯ ОБ ОШИБКАХ И УСПЕХЕ ===== */
+.badge-success {
+    background: rgba(76, 175, 80, 0.2);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.badge-warning {
+    background: rgba(255, 193, 7, 0.2);
+    color: var(--warning-color);
+    border: 1px solid var(--warning-color);
+}
+
+.badge-error {
+    background: rgba(255, 68, 68, 0.2);
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+}
+
+/* ========================================
+   8. СООБЩЕНИЯ
+======================================== */
 .error-message {
     display: none;
     background: rgba(255, 68, 68, 0.2);
@@ -217,7 +268,9 @@ img {
     border: 1px solid var(--success-color);
 }
 
-/* ===== ЧЕКБОКСЫ ===== */
+/* ========================================
+   9. ЧЕКБОКСЫ
+======================================== */
 .checkbox {
     display: flex;
     align-items: center;
@@ -265,7 +318,9 @@ img {
     color: var(--text-primary);
 }
 
-/* ===== ЗАГРУЗЧИК ===== */
+/* ========================================
+   10. ЗАГРУЗЧИК
+======================================== */
 .loading-overlay {
     display: none;
     position: fixed;
@@ -300,7 +355,126 @@ img {
     }
 }
 
-/* ===== УТИЛИТАРНЫЕ КЛАССЫ ===== */
+/* ========================================
+   11. МАКЕТ И СЕТКИ
+======================================== */
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.grid-2-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.grid-3-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.container-small {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ========================================
+   12. ШАПКА САЙТА
+======================================== */
+.header {
+    background: rgba(20, 20, 20, 0.95);
+    padding: 1rem 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text h1 {
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+}
+
+.logo-text p {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.main-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.main-menu li {
+    margin: 0;
+}
+
+.main-menu a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.main-menu a:hover {
+    color: var(--primary-color);
+    background: rgba(138, 43, 226, 0.1);
+}
+
+/* ========================================
+   13. ПОДВАЛ
+======================================== */
+.footer {
+    background: rgba(20, 20, 20, 0.95);
+    color: var(--text-muted);
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   14. УТИЛИТАРНЫЕ КЛАССЫ
+======================================== */
 .text-center {
     text-align: center;
 }
@@ -335,4 +509,56 @@ img {
 
 .mt-3 {
     margin-top: 3rem;
+}
+
+/* ========================================
+   15. АДАПТИВНОСТЬ (БАЗОВАЯ)
+======================================== */
+@media (max-width: 1024px) {
+    .grid-2-columns {
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .main-menu ul {
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .grid-2-columns,
+    .grid-3-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .btn-large {
+        padding: 1.1rem 2.5rem;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
 }
