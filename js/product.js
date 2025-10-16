@@ -10,9 +10,9 @@ const computersData = {
         mainImage: 'images/Green Monster.jpg',
         thumbnails: [
             'images/Green Monster.jpg',
-            'images/pc-build-2.jpg',
-            'images/pc-build-3.jpg',
-            'images/pc-build-4.jpg'
+            'images/Green Monster.jpg',
+            'images/Green Monster.jpg',
+            'images/Green Monster.jpg'
         ],
         specs: [
             { name: 'Процессор:', value: 'Intel Core i9-13900K' },
@@ -34,7 +34,7 @@ const computersData = {
             <p>Процессор Intel Core i9-13900K в сочетании с оперативной памятью DDR5 обеспечивает беспрецедентную производительность в играх и многозадачности. Система справится с любыми задачами — от стриминга до работы с профессиональными приложениями.</p>
 
             <h3>🎯 Ключевые преимущества</h3>
-            <ul class="benefits-list">
+            <ul>
                 <li>Стабильный FPS в 4K играх</li>
                 <li>Тихая работа даже под нагрузкой</li>
                 <li>Премиальная система охлаждения</li>
@@ -53,8 +53,8 @@ const computersData = {
         mainImage: 'images/Blue.webp',
         thumbnails: [
             'images/Blue.webp',
-            'images/pc-build-2.jpg',
-            'images/pc-build-3.jpg'
+            'images/Blue.webp',
+            'images/Blue.webp'
         ],
         specs: [
             { name: 'Процессор:', value: 'Intel Core i7-13700' },
@@ -76,7 +76,7 @@ const computersData = {
             <p>Все компоненты проходят тщательный отбор и тестирование на стабильность. Мы используем только проверенные решения от ведущих производителей.</p>
 
             <h3>🎯 Преимущества для офиса</h3>
-            <ul class="benefits-list">
+            <ul>
                 <li>Энергоэффективная работа</li>
                 <li>Тихая система охлаждения</li>
                 <li>Компактный корпус</li>
@@ -95,8 +95,8 @@ const computersData = {
         mainImage: 'images/Red.webp',
         thumbnails: [
             'images/Red.webp',
-            'images/pc-build-2.jpg',
-            'images/pc-build-3.jpg'
+            'images/Red.webp',
+            'images/Red.webp'
         ],
         specs: [
             { name: 'Процессор:', value: 'AMD Ryzen 7 7700X' },
@@ -118,7 +118,7 @@ const computersData = {
             <p>Быстрый рендеринг видео, работа с 3D-графикой и сложными проектами в Adobe Creative Suite. Эффективная многозадачность для одновременной работы в нескольких приложениях.</p>
 
             <h3>🌟 Ключевые особенности</h3>
-            <ul class="benefits-list">
+            <ul>
                 <li>Плавный стриминг 4K 60FPS</li>
                 <li>Быстрый рендеринг видео</li>
                 <li>Поддержка VR-контента</li>
@@ -137,7 +137,7 @@ const computersData = {
         mainImage: 'images/Black.jpg',
         thumbnails: [
             'images/Black.jpg',
-            'images/pc-build-2.jpg'
+            'images/Black.jpg'
         ],
         specs: [
             { name: 'Процессор:', value: 'AMD Ryzen 5 5600X' },
@@ -159,7 +159,7 @@ const computersData = {
             <p>Мы смогли сохранить высокое качество компонентов, предложив при этом одну из самых привлекательных цен на рынке. Отличное соотношение цены и производительности.</p>
 
             <h3>🚀 Преимущества для начинающих</h3>
-            <ul class="benefits-list">
+            <ul>
                 <li>Доступная цена</li>
                 <li>Отличная производительность в Full HD</li>
                 <li>Простота апгрейда в будущем</li>
@@ -178,9 +178,9 @@ const computersData = {
         mainImage: 'images/White.jpg',
         thumbnails: [
             'images/White.jpg',
-            'images/pc-build-2.jpg',
-            'images/pc-build-3.jpg',
-            'images/pc-build-4.jpg'
+            'images/White.jpg',
+            'images/White.jpg',
+            'images/White.jpg'
         ],
         specs: [
             { name: 'Процессор:', value: 'Intel Core i9-14900K' },
@@ -202,7 +202,7 @@ const computersData = {
             <p>Кастомная система жидкостного охлаждения обеспечивает стабильную работу даже при экстремальных нагрузках. Полный контроль над температурой каждого компонента.</p>
 
             <h3>💎 Премиум исполнение</h3>
-            <ul class="benefits-list">
+            <ul>
                 <li>Лучшие компоненты на рынке</li>
                 <li>Кастомная кабельная разводка</li>
                 <li>Эксклюзивный дизайн</li>
@@ -221,7 +221,7 @@ const computersData = {
         mainImage: 'images/PCBack.jpg',
         thumbnails: [
             'images/PCBack.jpg',
-            'images/pc-build-2.jpg'
+            'images/PCBack.jpg'
         ],
         specs: [
             { name: 'Процессор:', value: 'Intel Core i5-13400' },
@@ -243,7 +243,7 @@ const computersData = {
             <p>Специально разработанная система охлаждения обеспечивает оптимальные температуры даже в ограниченном пространстве корпуса.</p>
 
             <h3>🎯 Особенности компактной сборки</h3>
-            <ul class="benefits-list">
+            <ul>
                 <li>Минималистичный дизайн</li>
                 <li>Тихая работа</li>
                 <li>Энергоэффективность</li>
@@ -264,13 +264,9 @@ function getUrlParameter(name) {
 function loadComputerData() {
     const model = getUrlParameter('model');
     
-    if (!model || !computersData[model]) {
-        // Если модель не найдена, перенаправляем на каталог
-        window.location.href = 'catalog.html';
-        return;
-    }
-    
-    const computer = computersData[model];
+    // Если модель не указана, загружаем green-monster по умолчанию
+    const computerKey = model && computersData[model] ? model : 'green-monster';
+    const computer = computersData[computerKey];
     
     // Заполняем основную информацию
     document.getElementById('productTitle').textContent = computer.title;
@@ -286,7 +282,7 @@ function loadComputerData() {
         oldPriceElem.textContent = computer.oldPrice;
         discountElem.textContent = computer.discount;
         oldPriceElem.style.display = 'block';
-        discountElem.style.display = 'block';
+        discountElem.style.display = 'inline-block';
     } else {
         oldPriceElem.style.display = 'none';
         discountElem.style.display = 'none';

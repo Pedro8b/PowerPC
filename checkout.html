@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа - Power PC</title>
+
+    <!-- Подключаем все CSS файлы -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="images/Logo.png" alt="Power PC Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>Power PC</h1>
+                    <p>Только самые мощные компьютеры</p>
+                </div>
+            </div>
+        </a>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="catalog.html">Каталог ПК</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <div class="checkout-container">
+            <h1 class="page-title">Оформление заказа</h1>
+
+            <div class="checkout-grid">
+                <!-- Левая колонка: форма оплаты -->
+                <div class="payment-section">
+                    <h2>💳 Данные карты</h2>
+
+                    <div class="order-summary">
+                        <h3>Итого к оплате</h3>
+                        <div class="total-price" id="totalAmount">245 000 ₽</div>
+                        <p class="price-usd" id="priceInUSD">Загружаем курс...</p>
+                    </div>
+
+                    <form id="paymentForm" class="payment-form">
+                        <div class="form-group">
+                            <label for="cardNumber">Номер карты</label>
+                            <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19"
+                                required>
+                            <small class="form-hint">💡 Тестовая карта: 4111 1111 1111 1111</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cardHolder">Имя владельца (латиницей)</label>
+                            <input type="text" id="cardHolder" placeholder="IVAN IVANOV"
+                                style="text-transform: uppercase;" required>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Срок действия</label>
+                                <input type="text" id="expiryDate" placeholder="ММ/ГГ" maxlength="5" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="cvv">CVV код</label>
+                                <input type="text" id="cvv" placeholder="123" maxlength="3" required>
+                            </div>
+                        </div>
+
+                        <!-- Контактные данные -->
+                        <div class="form-section">
+                            <h3>📧 Контактные данные</h3>
+                            <div class="form-group">
+                                <label for="email">Email для чека</label>
+                                <input type="email" id="email" placeholder="your@email.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input type="tel" id="phone" placeholder="+7 (999) 123-45-67" required>
+                            </div>
+                        </div>
+
+                        <div id="paymentError" class="error-message"></div>
+                        <div id="paymentSuccess" class="success-message"></div>
+
+                        <button type="submit" class="btn btn-primary btn-large btn-full">
+                            🔒 Оплатить 245 000 ₽
+                        </button>
+
+                        <div class="security-badges">
+                            <span>🔒 Защищенное соединение</span>
+                            <span>✓ Visa / MasterCard / МИР</span>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Правая колонка: информация о заказе и доставке -->
+                <div class="order-info-section">
+                    <!-- Товар в заказе -->
+                    <div class="order-product">
+                        <h2>📦 Ваш заказ</h2>
+                        <div class="product-summary">
+                            <img src="images/Green Monster.jpg" alt="Gamer Beast RTX 4080" class="product-thumb">
+                            <div class="product-details">
+                                <h3>Gamer Beast RTX 4080</h3>
+                                <p class="product-specs">Intel i9 • RTX 4080 • 32GB RAM</p>
+                                <p class="product-price">245 000 ₽</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Калькулятор доставки -->
+                    <div class="delivery-calculator">
+                        <h2>🚚 Доставка СДЭК</h2>
+                        <p class="delivery-description">
+                            Рассчитайте стоимость и сроки доставки в ваш город
+                        </p>
+
+                        <div class="form-group">
+                            <label for="citySelect">Выберите город</label>
+                            <select id="citySelect" class="city-select">
+                                <option value="">-- Выберите город --</option>
+                                <option value="44">Москва</option>
+                                <option value="137">Санкт-Петербург</option>
+                                <option value="270">Новосибирск</option>
+                                <option value="250">Екатеринбург</option>
+                                <option value="151">Казань</option>
+                                <option value="344">Самара</option>
+                                <option value="438">Краснодар</option>
+                            </select>
+                        </div>
+
+                        <button id="calculateDeliveryBtn" class="btn btn-secondary btn-full">
+                            Рассчитать доставку
+                        </button>
+
+                        <div id="deliveryResult" class="delivery-result">
+                            <div class="result-item">
+                                <span class="result-label">Стоимость:</span>
+                                <span id="deliveryCost" class="result-value">-</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-label">Срок доставки:</span>
+                                <span id="deliveryDays" class="result-value">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Гарантии -->
+                    <div class="guarantees">
+                        <h3>✅ Наши гарантии</h3>
+                        <ul class="guarantee-list">
+                            <li>🛡️ Гарантия 3 года на все компоненты</li>
+                            <li>📦 Бесплатная упаковка и страховка</li>
+                            <li>🔧 Тестирование перед отправкой</li>
+                            <li>💯 Возврат в течение 14 дней</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Оверлей загрузки -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>⏳ Обработка платежа...</p>
+        <small>Не закрывайте страницу</small>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p>&copy; 2024 Power PC. Онлайн-магазин мощных компьютеров. Все права защищены.</p>
+    </footer>
+
+    <!-- Подключаем скрипты -->
+    <script src="js/currency.js"></script>
+    <script src="js/delivery.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+
+</html>
