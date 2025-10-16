@@ -1,0 +1,255 @@
+/* ===== СТИЛИ ЛИЧНОГО КАБИНЕТА ===== */
+.account-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(0, 0, 0, 0.8));
+    border-radius: 15px;
+}
+
+.account-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(45deg, #ffffff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.account-header p {
+    color: #cccccc;
+    font-size: 1.1rem;
+}
+
+.account-layout {
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* Боковое меню */
+.account-sidebar {
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid #333;
+    position: sticky;
+    top: 2rem;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #333;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #8a2be2, #4a00e0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.user-info h3 {
+    color: #ffffff;
+    margin-bottom: 0.3rem;
+}
+
+.user-info p {
+    color: #8a2be2;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    color: #cccccc;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover,
+.menu-item.active {
+    background: rgba(138, 43, 226, 0.1);
+    color: #8a2be2;
+}
+
+.menu-item.logout {
+    color: #ff4444;
+    margin-top: 1rem;
+}
+
+.menu-item.logout:hover {
+    background: rgba(255, 68, 68, 0.1);
+}
+
+.menu-icon {
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Основной контент */
+.account-content {
+    flex: 1;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h2 {
+    color: #8a2be2;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+/* Форма профиля */
+.profile-form {
+    background: rgba(30, 30, 30, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Список заказов */
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.order-card {
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.order-card:hover {
+    border-color: #8a2be2;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.order-info h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.order-date {
+    color: #cccccc;
+    margin: 0;
+}
+
+.order-status {
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.status-delivered {
+    background: rgba(76, 175, 80, 0.2);
+    color: #4caf50;
+    border: 1px solid #4caf50;
+}
+
+.status-processing {
+    background: rgba(255, 193, 7, 0.2);
+    color: #ffc107;
+    border: 1px solid #ffc107;
+}
+
+.order-items {
+    margin-bottom: 1.5rem;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-details h4 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.item-price {
+    color: #8a2be2;
+    font-weight: bold;
+    margin: 0;
+}
+
+.order-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid #333;
+}
+
+.order-total {
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+/* Настройки */
+.settings-section {
+    background: rgba(30, 30, 30, 0.8);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid #333;
+    margin-bottom: 2rem;
+}
+
+.settings-section h3 {
+    color: #8a2be2;
+    margin-bottom: 1.5rem;
+}
+
+.setting-item {
+    margin-bottom: 1rem;
+}

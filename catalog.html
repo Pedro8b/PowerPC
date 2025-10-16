@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power PC - Каталог компьютеров</title>
+
+    <!-- Подключаем все CSS файлы -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/catalog.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="images/Logo.png" alt="Power PC Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>Power PC</h1>
+                    <p>Только самые мощные компьютеры</p>
+                </div>
+            </div>
+        </a>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="catalog.html">Каталог ПК</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <section class="catalog-hero">
+            <h2>Мощные компьютеры для любых задач</h2>
+            <p>Игры, работа, творчество - выбирайте свою мощь!</p>
+        </section>
+
+        <!-- Сетка компьютеров -->
+        <section class="computers-grid-section">
+            <h2>Наши компьютеры</h2>
+            <div class="computers-grid">
+                <!-- Компьютер 1 -->
+                <div class="computer-card">
+                    <div class="computer-image">
+                        <img src="images/Green Monster.jpg" alt="Green Monster RTX 4080">
+                    </div>
+                    <div class="computer-info">
+                        <h3>Gamer Beast RTX 4080</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <span class="spec-name">Процессор:</span>
+                                <span class="spec-value">Intel Core i9-13900K</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Видеокарта:</span>
+                                <span class="spec-value">NVIDIA RTX 4080 16GB</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">ОЗУ:</span>
+                                <span class="spec-value">32GB DDR5</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Накопитель:</span>
+                                <span class="spec-value">2TB NVMe SSD</span>
+                            </div>
+                        </div>
+                        <p class="computer-description">
+                            Игровой компьютер для самых требовательных геймеров.
+                            Потрясающая производительность в 4K.
+                        </p>
+                        <div class="price-section">
+                            <span class="price">245 000 ₽</span>
+                            <a href="product.html?model=green-monster" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Компьютер 2 -->
+                <div class="computer-card">
+                    <div class="computer-image">
+                        <img src="images/Blue.webp" alt="Soft Pro">
+                    </div>
+                    <div class="computer-info">
+                        <h3>Office Pro i7</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <span class="spec-name">Процессор:</span>
+                                <span class="spec-value">Intel Core i7-13700</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Видеокарта:</span>
+                                <span class="spec-value">NVIDIA RTX 4060 8GB</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">ОЗУ:</span>
+                                <span class="spec-value">16GB DDR4</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Накопитель:</span>
+                                <span class="spec-value">1TB NVMe SSD</span>
+                            </div>
+                        </div>
+                        <p class="computer-description">
+                            Идеальное решение для офиса и работы.
+                            Быстродействие и надежность.
+                        </p>
+                        <div class="price-section">
+                            <span class="price">125 000 ₽</span>
+                            <a href="product.html?model=pro" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Компьютер 3 -->
+                <div class="computer-card">
+                    <div class="computer-image">
+                        <img src="images/Red.webp" alt="Stream Master">
+                    </div>
+                    <div class="computer-info">
+                        <h3>Stream Master</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <span class="spec-name">Процессор:</span>
+                                <span class="spec-value">AMD Ryzen 7 7700X</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Видеокарта:</span>
+                                <span class="spec-value">NVIDIA RTX 4070 12GB</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">ОЗУ:</span>
+                                <span class="spec-value">32GB DDR5</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Накопитель:</span>
+                                <span class="spec-value">1TB NVMe SSD</span>
+                            </div>
+                        </div>
+                        <p class="computer-description">
+                            Для стримеров и создателей контента.
+                            Плавный стриминг и рендеринг.
+                        </p>
+                        <div class="price-section">
+                            <span class="price">189 000 ₽</span>
+                            <a href="product.html?model=stream-master" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Компьютер 4 -->
+                <div class="computer-card">
+                    <div class="computer-image">
+                        <img src="images/Black.jpg" alt="Budget Warrior" scale(0.5)>
+                    </div>
+                    <div class="computer-info">
+                        <h3>Budget Warrior</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <span class="spec-name">Процессор:</span>
+                                <span class="spec-value">AMD Ryzen 5 5600X</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Видеокарта:</span>
+                                <span class="spec-value">NVIDIA RTX 4060 8GB</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">ОЗУ:</span>
+                                <span class="spec-value">16GB DDR4</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Накопитель:</span>
+                                <span class="spec-value">512GB NVMe SSD</span>
+                            </div>
+                        </div>
+                        <p class="computer-description">
+                            Отличное начало для игр.
+                            Высокая производительность по доступной цене.
+                        </p>
+                        <div class="price-section">
+                            <span class="price">89 000 ₽</span>
+                            <a href="product.html?model=budget-warrior" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Компьютер 5 -->
+                <div class="computer-card">
+                    <div class="computer-image">
+                        <img src="images/White.jpg" alt="Extreme Overlord">
+                    </div>
+                    <div class="computer-info">
+                        <h3>Extreme Overlord</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <span class="spec-name">Процессор:</span>
+                                <span class="spec-value">Intel Core i9-14900K</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Видеокарта:</span>
+                                <span class="spec-value">NVIDIA RTX 4090 24GB</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">ОЗУ:</span>
+                                <span class="spec-value">64GB DDR5</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Накопитель:</span>
+                                <span class="spec-value">4TB NVMe SSD</span>
+                            </div>
+                        </div>
+                        <p class="computer-description">
+                            Абсолютная мощь. Для тех, кто не ищет компромиссов.
+                            Лучшее из лучшего.
+                        </p>
+                        <div class="price-section">
+                            <span class="price">389 000 ₽</span>
+                            <a href="product.html?model=extreme-overlord" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Компьютер 6 -->
+                <div class="computer-card">
+                    <div class="computer-image">
+                        <img src="images/PCBack.jpg" alt="Compact Pro">
+                    </div>
+                    <div class="computer-info">
+                        <h3>Compact Pro</h3>
+                        <div class="specs-list">
+                            <div class="spec-item">
+                                <span class="spec-name">Процессор:</span>
+                                <span class="spec-value">Intel Core i5-13400</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Видеокарта:</span>
+                                <span class="spec-value">NVIDIA RTX 4060 8GB</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">ОЗУ:</span>
+                                <span class="spec-value">16GB DDR4</span>
+                            </div>
+                            <div class="spec-item">
+                                <span class="spec-name">Накопитель:</span>
+                                <span class="spec-value">1TB NVMe SSD</span>
+                            </div>
+                        </div>
+                        <p class="computer-description">
+                            Компактный корпус без потери производительности.
+                            Для экономии пространства.
+                        </p>
+                        <div class="price-section">
+                            <span class="price">112 000 ₽</span>
+                            <a href="product.html?model=compact-pro" class="btn btn-primary">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Блок преимуществ -->
+        <section class="catalog-advantages">
+            <h2>Почему выбирают Power PC?</h2>
+            <div class="catalog-advantages-grid">
+                <div class="catalog-advantage-card">
+                    <h3>⚡ Высокая производительность</h3>
+                    <p>Только топовые компоненты от проверенных брендов</p>
+                </div>
+                <div class="catalog-advantage-card">
+                    <h3>🛠️ Профессиональная сборка</h3>
+                    <p>Каждый компьютер тестируется перед отправкой</p>
+                </div>
+                <div class="catalog-advantage-card">
+                    <h3>🔧 Гарантия 3 года</h3>
+                    <p>Расширенная гарантия на все комплектующие</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p>&copy; 2024 Power PC. Магазин мощных компьютеров. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>

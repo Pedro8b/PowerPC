@@ -1,0 +1,552 @@
+/* ===== СТИЛИ ГЛАВНОЙ СТРАНИЦЫ ===== */
+.main-showcase {
+    padding: 1rem 0;
+}
+
+/* Красивый фон для главной страницы */
+body {
+    background-color: #000000;
+    background-image:
+        radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(138, 43, 226, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.08) 0%, transparent 40%);
+    background-attachment: fixed;
+}
+
+/* ===== УЛУЧШЕННЫЙ БЛОК ПРЕИМУЩЕСТВ ===== */
+.enhanced-advantages {
+    padding: 6rem 0;
+    background: radial-gradient(circle at 50% 50%, rgba(138, 43, 226, 0.05) 0%, transparent 50%);
+    position: relative;
+    overflow: hidden;
+}
+
+.enhanced-advantages::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #8a2be2, transparent);
+}
+
+.advantages-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.advantages-header h2 {
+    font-size: 2.8rem;
+    background: linear-gradient(45deg, #ffffff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.advantages-header p {
+    font-size: 1.3rem;
+    color: #cccccc;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.advantages-showcase {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.advantage-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+    position: relative;
+}
+
+.advantage-feature.reverse {
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+}
+
+.advantage-feature.reverse>* {
+    direction: ltr;
+}
+
+.feature-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+.tech-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8a2be2, #4a00e0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    box-shadow:
+        0 10px 30px rgba(138, 43, 226, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 2;
+    animation: float 6s ease-in-out infinite;
+}
+
+.pulse-dot {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 2px solid #8a2be2;
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite;
+    opacity: 0.3;
+}
+
+.pulse-dot::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 1px solid #8a2be2;
+    border-radius: 50%;
+    animation: pulse 3s ease-in-out infinite 1.5s;
+    opacity: 0.2;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.1;
+    }
+}
+
+.feature-content h3 {
+    font-size: 2rem;
+    color: #8a2be2;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.feature-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+}
+
+.feature-benefits {
+    list-style: none;
+}
+
+.feature-benefits li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #333;
+    position: relative;
+    padding-left: 2rem;
+    color: #cccccc;
+    transition: color 0.3s ease;
+}
+
+.feature-benefits li:hover {
+    color: #8a2be2;
+}
+
+/* ===== УЛУЧШЕННЫЙ ТЕКСТ ПРИВЕТСТВИЯ ===== */
+
+/* Вариант 1 Стили */
+.welcome-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.welcome-header h2 {
+    font-size: 2.8rem;
+    background: linear-gradient(45deg, #ffffff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.accent-line {
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #8a2be2, transparent);
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+.lead {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.mission-point h3 {
+    color: #8a2be2;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.mission-point p {
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.journey-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(138, 43, 226, 0.05);
+    border-radius: 15px;
+    border-left: 4px solid #8a2be2;
+}
+
+.journey-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #8a2be2, #4a00e0);
+    padding: 1rem;
+    border-radius: 10px;
+    min-width: 100px;
+}
+
+.years {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.label {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+}
+
+.journey-section p {
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.values-showcase h3 {
+    text-align: center;
+    color: #8a2be2;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.value-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(40, 40, 40, 0.6);
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.value-card:hover {
+    border-color: #8a2be2;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.2);
+}
+
+.value-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.value-content h4 {
+    color: #8a2be2;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.value-content p {
+    color: #cccccc;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Вариант 2 Стили */
+.power-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+    color: #8a2be2;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-left: 4px solid #8a2be2;
+    background: rgba(138, 43, 226, 0.05);
+    border-radius: 0 10px 10px 0;
+}
+
+.vision-text p {
+    color: #e0e0e0;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+.clients-list {
+    list-style: none;
+    margin: 2rem 0;
+}
+
+.clients-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #333;
+    color: #cccccc;
+    font-size: 1.1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .welcome-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pillars-container {
+        grid-template-columns: 1fr;
+    }
+
+    .power-quote {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+    }
+}
+
+.feature-benefits li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #8a2be2;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Адаптивность для улучшенных преимуществ */
+@media (max-width: 968px) {
+
+    .advantage-feature,
+    .advantage-feature.reverse {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .advantages-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .tech-circle {
+        width: 150px;
+        height: 150px;
+        font-size: 3rem;
+    }
+
+    .pulse-dot {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pulse-dot::before {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .enhanced-advantages {
+        padding: 4rem 0;
+    }
+
+    .advantages-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .feature-content h3 {
+        font-size: 1.6rem;
+    }
+}
+
+.showcase-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    margin-bottom: 4rem;
+}
+
+/* ЛЕВАЯ КОЛОНКА - КОМПЬЮТЕР */
+.computer-showcase {
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    padding: 2rem;
+    border: 1px solid #333;
+}
+
+.computer-image-main {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.computer-image-main img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.computer-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(45deg, #8a2be2, #6a0dad);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.computer-specs-main h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #8a2be2;
+}
+
+.computer-specs-main ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.computer-specs-main li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #333;
+    color: #e0e0e0;
+}
+
+.computer-specs-main li:before {
+    content: "✓";
+    color: #8a2be2;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.price-main {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #8a2be2;
+    text-align: center;
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+}
+
+/* ПРАВАЯ КОЛОНКА - ТЕКСТ ПРИВЕТСТВИЯ */
+.welcome-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #8a2be2;
+    font-weight: 300;
+}
+
+.welcome-content {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+}
+
+.features-list {
+    margin-top: 2rem;
+    background: rgba(40, 40, 40, 0.6);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #333;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #333;
+}
+
+.feature-item:last-child {
+    border-bottom: none;
+}
+
+.feature-icon {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    width: 30px;
+    text-align: center;
+}
+
+/* КОНТЕЙНЕР ДЛЯ КНОПКИ */
+.showcase-actions {
+    text-align: center;
+    padding-top: 3rem;
+    margin-top: 2rem;
+    border-top: 1px solid #333;
+}
+
+.catalogref-text{
+    text-align: center;
+    margin-bottom: 1.5rem;
+        font-size: 2rem;
+    color: #e0e0e0;
+}

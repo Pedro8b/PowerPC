@@ -1,0 +1,94 @@
+/* ===== АДАПТИВНЫЕ СТИЛИ ===== */
+
+/* ПЛАНШЕТЫ */
+@media (max-width: 1024px) {
+    .showcase-container {
+        gap: 3rem;
+    }
+}
+
+/* МОБИЛЬНЫЕ УСТРОЙСТВА */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .main-menu ul {
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .main-menu li {
+        margin: 0;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .showcase-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .computer-showcase {
+        order: 2;
+    }
+
+    .welcome-text {
+        order: 1;
+    }
+
+    .welcome-text h2 {
+        font-size: 2rem;
+    }
+
+    .computer-specs-main h3 {
+        font-size: 1.5rem;
+    }
+
+    .price-main {
+        font-size: 1.8rem;
+    }
+
+    .btn-large {
+        padding: 1.1rem 2.5rem;
+        font-size: 1.2rem;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .grid-2-columns,
+    .grid-3-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* МАЛЕНЬКИЕ ЭКРАНЫ */
+@media (max-width: 480px) {
+
+    .computer-showcase,
+    .welcome-text {
+        padding: 1.5rem;
+    }
+
+    .welcome-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+    }
+
+    .features-list {
+        padding: 1rem;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+}

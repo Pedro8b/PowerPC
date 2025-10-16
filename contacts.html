@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power PC - Контакты</title>
+
+    <!-- Подключаем все CSS файлы -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <a href="index.html" class="logo-link">
+            <div class="logo">
+                <img src="images/Logo.png" alt="Power PC Logo" class="logo-image">
+                <div class="logo-text">
+                    <h1>Power PC</h1>
+                    <p>Только самые мощные компьютеры</p>
+                </div>
+            </div>
+        </a>
+        <nav class="main-menu">
+            <ul>
+                <li><a href="catalog.html">Каталог ПК</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+                <li><a href="login.html">Войти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="main-content">
+        <section class="contacts-hero">
+            <h1>Свяжитесь с нами</h1>
+            <p class="hero-subtitle">Мы всегда готовы помочь вам выбрать идеальный компьютер</p>
+            <div class="online-badge">
+                <span class="badge-icon">🌐</span>
+                <span>100% онлайн-магазин</span>
+            </div>
+        </section>
+
+        <div class="contacts-container grid-2-columns">
+            <!-- Контактная информация -->
+            <div class="contact-info">
+                <h2>Наши контакты</h2>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-details">
+                        <h3>Телефон и WhatsApp</h3>
+                        <p>+7 (495) 123-45-67</p>
+                        <p class="contact-note">Ежедневно с 9:00 до 21:00</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <p>info@powerpc.ru</p>
+                        <p class="contact-note">Ответим в течение 2 часов</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <div class="contact-details">
+                        <h3>Онлайн-чат</h3>
+                        <p>Доступен на сайте 24/7</p>
+                        <p class="contact-note">Боты и живые операторы</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">🕒</div>
+                    <div class="contact-details">
+                        <h3>Время работы поддержки</h3>
+                        <p>Пн-Пт: 9:00 - 21:00</p>
+                        <p>Сб-Вс: 10:00 - 20:00</p>
+                    </div>
+                </div>
+
+                <div class="online-features">
+                    <h3>Преимущества онлайн-магазина</h3>
+                    <div class="features-grid">
+                        <div class="feature">
+                            <span class="feature-icon">🚚</span>
+                            <span>Доставка по всей России</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">💻</span>
+                            <span>Онлайн-консультации</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Подбор ПК под ваши задачи</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">⚡</span>
+                            <span>Мгновенная обработка заказов</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slogan-section">
+                    <h3>Наш слоган</h3>
+                    <blockquote class="slogan">
+                        "Мощь, которая вдохновляет — технологии, которые работают"
+                    </blockquote>
+                </div>
+            </div>
+
+            <!-- Форма обратной связи -->
+            <div class="contact-form-section">
+                <h2>Остались вопросы?</h2>
+                <p>Заполните форму и мы свяжемся с вами в ближайшее время</p>
+
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Тема обращения</label>
+                        <select id="subject" name="subject">
+                            <option value="">Выберите тему</option>
+                            <option value="consultation">Консультация по подбору ПК</option>
+                            <option value="order">Вопрос по заказу</option>
+                            <option value="warranty">Гарантия и обслуживание</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Опишите ваш вопрос или задачу, для которой нужен компьютер..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Отправить сообщение</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Блок доставки -->
+        <section class="delivery-section">
+            <h2>Доставка по всей России</h2>
+            <div class="delivery-grid">
+                <div class="delivery-card">
+                    <div class="delivery-icon">📦</div>
+                    <h3>Курьерская доставка</h3>
+                    <p>Бесплатная доставка до двери по Москве и Санкт-Петербургу</p>
+                </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon">🚚</div>
+                    <h3>Транспортные компании</h3>
+                    <p>Доставка в любой город России через СДЭК, Boxberry и другие ТК</p>
+                </div>
+                <div class="delivery-card">
+                    <div class="delivery-icon">🏪</div>
+                    <h3>Пункты выдачи</h3>
+                    <p>Более 5000 пунктов выдачи заказов по всей стране</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <p>&copy; 2024 Power PC. Онлайн-магазин мощных компьютеров. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>

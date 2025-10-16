@@ -1,0 +1,10 @@
+/* ===== ПОДВАЛ ===== */
+.footer {
+    background: rgba(20, 20, 20, 0.95);
+    color: #888;
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid #333;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+}

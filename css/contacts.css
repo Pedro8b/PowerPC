@@ -1,0 +1,299 @@
+/* ===== СТИЛИ СТРАНИЦЫ КОНТАКТОВ ===== */
+.contacts-hero {
+    text-align: center;
+    padding: 3rem 0 2rem;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.1), rgba(0, 0, 0, 0.8));
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.contacts-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #ffffff, #8a2be2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #cccccc;
+    margin-bottom: 1.5rem;
+}
+
+.online-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(138, 43, 226, 0.2);
+    color: #8a2be2;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    border: 1px solid #8a2be2;
+    font-weight: 600;
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+}
+
+.contacts-container {
+    margin-bottom: 4rem;
+}
+
+.contact-info h2 {
+    color: #8a2be2;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+    border-color: #8a2be2;
+    transform: translateX(5px);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.contact-details h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.contact-details p {
+    color: #e0e0e0;
+    margin-bottom: 0.3rem;
+}
+
+.contact-note {
+    color: #8a2be2 !important;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Преимущества онлайн-магазина */
+.online-features {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(138, 43, 226, 0.1);
+    border-radius: 15px;
+    border-left: 4px solid #8a2be2;
+}
+
+.online-features h3 {
+    color: #8a2be2;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.feature:hover {
+    border-color: #8a2be2;
+    transform: translateY(-3px);
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.feature span:last-child {
+    color: #e0e0e0;
+    font-weight: 500;
+}
+
+.slogan-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: rgba(138, 43, 226, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid #8a2be2;
+}
+
+.slogan-section h3 {
+    color: #8a2be2;
+    margin-bottom: 1rem;
+}
+
+.slogan {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Форма обратной связи */
+.contact-form-section {
+    background: rgba(30, 30, 30, 0.8);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
+.contact-form-section h2 {
+    color: #8a2be2;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.contact-form-section p {
+    color: #cccccc;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(50, 50, 50, 0.8);
+    border: 1px solid #555;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #8a2be2;
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+    font-family: inherit;
+}
+
+.form-group select {
+    cursor: pointer;
+}
+
+/* Секция доставки */
+.delivery-section {
+    margin: 4rem 0;
+    padding: 3rem;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 15px;
+    border: 1px solid #333;
+}
+
+.delivery-section h2 {
+    text-align: center;
+    color: #8a2be2;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.delivery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.delivery-card {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(40, 40, 40, 0.6);
+    border-radius: 10px;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.delivery-card:hover {
+    border-color: #8a2be2;
+    transform: translateY(-5px);
+}
+
+.delivery-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.delivery-card h3 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.delivery-card p {
+    color: #cccccc;
+    line-height: 1.5;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .contacts-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .delivery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .contact-icon {
+        align-self: center;
+    }
+}
