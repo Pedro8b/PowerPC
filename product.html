@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Товар - Power PC</title>
 
-    <!-- Подключаем все CSS файлы -->
+    <!-- Основные стили -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Стили страницы товара -->
     <link rel="stylesheet" href="css/product.css">
     <link rel="stylesheet" href="css/responsive.css">
 </head>
@@ -68,8 +69,13 @@
                 </div>
 
                 <div class="product-actions">
-                    <button class="btn btn-primary btn-large">Купить сейчас</button>
-                    <button class="btn btn-secondary btn-large">Добавить в избранное</button>
+                    <!-- Кнопка перехода на страницу оплаты -->
+                    <a href="checkout.html" class="btn btn-primary btn-large" id="buyNowBtn">
+                        🛒 Купить сейчас
+                    </a>
+                    <button class="btn btn-secondary btn-large" id="addToFavoritesBtn">
+                        💖 В избранное
+                    </button>
                 </div>
 
                 <div class="delivery-info">

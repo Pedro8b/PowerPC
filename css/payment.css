@@ -1,0 +1,217 @@
+/* ===== СТИЛИ СТРАНИЦЫ ОПЛАТЫ ===== */
+/* Используем базовые стили из base.css, здесь только специфика */
+
+.checkout-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* ===== СЕКЦИЯ ОПЛАТЫ ===== */
+.payment-section h2,
+.order-info-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.order-summary {
+    background: rgba(138, 43, 226, 0.1);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.order-summary h3 {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.total-price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.3);
+}
+
+.price-usd {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Форма расширяет базовые стили */
+.payment-form {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.form-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.form-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.security-badges {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ===== ИНФОРМАЦИЯ О ЗАКАЗЕ ===== */
+.order-product,
+.delivery-calculator,
+.guarantees {
+    background: var(--secondary-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.product-summary {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.product-thumb {
+    padding-top: 1rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 2rem;
+}
+
+.product-details h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.product-specs {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.product-price {
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+/* ===== КАЛЬКУЛЯТОР ДОСТАВКИ ===== */
+.delivery-description {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.city-select {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.delivery-result {
+    display: none;
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(138, 43, 226, 0.1);
+    border-radius: 10px;
+    border: 1px solid rgba(138, 43, 226, 0.3);
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    color: var(--text-secondary);
+}
+
+.result-value {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ===== ГАРАНТИИ ===== */
+.guarantees h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.guarantee-list {
+    list-style: none;
+}
+
+.guarantee-list li {
+    padding: 0.8rem 0;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.guarantee-list li:last-child {
+    border-bottom: none;
+}
+
+/* ===== АДАПТИВНОСТЬ ===== */
+@media (max-width: 1024px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .payment-form,
+    .order-product,
+    .delivery-calculator,
+    .guarantees {
+        padding: 1.5rem;
+    }
+
+    .product-summary {
+        flex-direction: column;
+        text-align: center;
+    }
+}
